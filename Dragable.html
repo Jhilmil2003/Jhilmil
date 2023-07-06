@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="//code.jquery.com/ui/
-                            1.12.1/themes/base/jquery-ui.css">
-                            <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <style type="text/css">
     #MyDiv,#MyHomeDiv,#MyHorizontalDiv,#MyVerticalDiv
@@ -21,10 +20,10 @@
     }
     #MyFirstPixelDiv,#MyFiftyPixelDiv  
     {
-        width:0px;
-        height:0px;
+        width:500px;
+        height:500px;
         padding:10px;
-        backgroung:blue;
+        background-color:blue;
         color:#ddddff;
         font-size: large;
         font-weight: bold;
@@ -34,29 +33,30 @@
 <body>
     <script type="text/javascript">
         $(document).ready(function (){
-            $( "#MyDiv").draggable();
-            $("#MyHomeDiv span").draggble({
+            $("#MyDiv").draggable();
+
+            $("#MyHomeDiv").draggable({
                 containment: "#MyHomeDiv"
             });
-            $("#MyHorizontalDiv span").draggable({
+            $("#MyHorizontalDiv").draggable({
                 axis:"x"
             });
-            $("#MyVerticalDiv span").draggable({
+            $("#MyVerticalDiv").draggable({
                 axis:"y"
             });
-            $("#MyFiftyPixelDiv span").draggable({
+            $("#MyFiftyPixelDiv").draggable({
                 distance:200
             });
-            $("#MyThreeSecondsDelayDiv span").draggable({
+            $("#MyThreeSecondsDelayDiv").draggable({
                 delay:3000
             });
         })
     </script>
-    <div id="#MyDiv" style="height: 100px; width: 100px; background-color: brown;">Hello Students!!</div><br><hr>
-    <div id="#MyHomeDiv" style="height: 100px; width: 100px; background-color: brown;">This is my home and i can move within it only.</div><br><hr>
-    <div  id="#MyHorizontalDiv" style="height: 100px; width: 100px; background-color: brown;">I can move horizontly.</div><br><hr>
-    <div id="#MyVerticalDiv" style="height: 100px; width: 100px; background-color: brown;">I can move vertically.</div><br><hr>
-    <div id="#MyFiftyPixelDiv" style="height: 100px; width: 100px; background-color: brown;">I can move after 3 seconds.</div><br><hr>
-    <div id="#MyFirstPixelDiv" style="height: 100px; width: 500px; background-color: brown;">I can move only after 200 PN.</div><br><hr>
+    <div id="MyDiv">Hello Students!!</div><br><hr>
+    <div id="MyHomeDiv">This is my home and i can move within it only.</div><br><hr>
+    <div  id="MyHorizontalDiv">I can move horizontly.</div><br><hr>
+    <div id="MyVerticalDiv">I can move vertically.</div><br><hr>
+    <div id="MyFiftyPixelDiv">I can move after 3 seconds.</div><br><hr>
+    <div id="MyFirstPixelDiv">I can move only after 200 PN.</div><br><hr>
 </body>
 </html>
